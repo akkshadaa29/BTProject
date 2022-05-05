@@ -24,19 +24,19 @@ const HomePage = ({ getTopPosts, post: { posts, loading }  }) => {
                         <h3 className='questions-headline'>Top Questions</h3>
                         <div className='questions-btn'>
                             <Link to='/add/question'>
-                                <button className = 's-btn s-btn__primary'>Ask Question</button>
+                                <button className = 's-btn s-btn__primary' style={{background:'#5fcf80'}}>Ask Question</button>
                             </Link>
                         </div>
                     </div>
                     <div className='questions-tabs'>
-                        <span>19,204,360 questions</span>
+                        {/* <span>19,204,360 questions</span> */}
                     </div>
                     <div className='questions'>
                         {posts.map(post => (
                             <PostItem key={post.id} post={post}/>))}
                     </div>
                 </div>
-                <RightSideBar/>
+                <RightSideBar/> 
             </div>
         </div>
     </Fragment>

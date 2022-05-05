@@ -16,6 +16,7 @@
 }
 
 .homepage {
+  background-color: #fff;
   width: calc(100% - 300px - 24px);
   padding: 24px 0 24px 0;
   float: left;
@@ -30,6 +31,7 @@
       flex: 1 auto;
       font-size: 28px;
       font-weight: 400;
+      color:#4a4e51;
     }
     .questions-btn {
       margin-left: 12px;

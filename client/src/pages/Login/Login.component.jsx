@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { login } from '../../redux/auth/auth.actions';
 import PropTypes from 'prop-types';
 
-import { ReactComponent as Logo } from '../../assets/LogoGlyphMd.svg';
+//import { ReactComponent as Logo } from '../../assets/LogoGlyphMd.svg';
 
 const Login = ({ login, isAuthenticated }) => {
     const [ formData, setFormData ] = useState({
@@ -31,7 +31,8 @@ const Login = ({ login, isAuthenticated }) => {
                 <div className='register-grid'>
                     <div>
                         <div className='icon-holder'>
-                            <Logo className='icon'/>
+                            {/* <Logo className='icon'/> */}
+                            <h3>Login to Antwort</h3>
                         </div>
                         <div className='form-container'>
                             <form className='login-form' onSubmit={e => onSubmit(e)}>
@@ -63,18 +64,18 @@ const Login = ({ login, isAuthenticated }) => {
                                     <button className='s-btn s-btn__primary' id='submit-button' name='submit-button'>Log in</button>
                                 </div>
                             </form>
-                            <div className='fs-caption license fc-black-500'>
+                            {/* <div className='fs-caption license fc-black-500'>
                                 By clicking “Log In”, you agree to our <Link to='https://stackoverflow.com/legal/terms-of-service/public' className='-link'>
                                 terms of service</Link>, <Link to='https://stackoverflow.com/legal/privacy-policy' name='privacy' className='-link'>
                                 privacy policy</Link> and <Link to='https://stackoverflow.com/legal/cookie-policy' className='-link'>cookie policy</Link>
                                 <input type='hidden' name='legalLinksShown' value='1'/>
-                            </div>
+                            </div> */}
                         </div>
                         <div className='redirects fc-black-500'>
                             Don't have an account? <Link to='/register' name='login'>Sign up</Link>
-                            <div>
+                            {/* <div>
                                 Are you an employer? <Link to='https://careers.stackoverflow.com/employer/login' name='talent'>Sign up on Talent <svg aria-hidden='true' className='svg-icon va-text-bottom sm-d-none icon-share-sm' width='14' height='14' viewBox='0 0 14 14'><path d='M5 1H3a2 2 0 0 0-2 2v8c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V9h-2v2H3V3h2V1z'/><path d='M7 1h6v6h-2V4.5L6.5 9 5 7.5 9.5 3H7V1z'/></svg></Link>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

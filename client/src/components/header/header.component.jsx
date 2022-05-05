@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../../redux/auth/auth.actions'
 
-import { ReactComponent as Logo } from '../../assets/LogoMd.svg';
+//import { ReactComponent as Logo } from '../../assets/LogoMd.svg';
 import { ReactComponent as Search } from '../../assets/Search.svg';
 
 import './header.styles.scss';
@@ -13,32 +13,32 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
     const authLinks = (
         <div className='btns'>
             <Link onClick={ logout } to='/login'>
-                <button type='button' className='s-btn s-btn__filled'>Log out</button>
+                <button type='button' className='s-btn s-btn__primary' style={{background:'#5fcf80'}}>Log out</button>
             </Link>
         </div>
     );
 
     const authTabs = (
         <div className="s-navigation">
-            <Link to='/' className="s-navigation--item is-selected">Products</Link>
+            <Link to='/' className="s-navigation--item is-selected">Home</Link>  
         </div>
     );
-
+  // products on line 23 changed to Home
     const guestTabs = (
         <div className="s-navigation">
-            <Link to='/' className="s-navigation--item is-selected">Products</Link>
-            <Link to='/' className="s-navigation--item not-selected">Customers</Link>
-            <Link to='/' className="s-navigation--item not-selected">Use cases</Link>
+            <Link to='/' className="s-navigation--item is-selected">Home</Link>
+            {/* <Link to='/' className="s-navigation--item not-selected">Customers</Link>
+            <Link to='/' className="s-navigation--item not-selected">Use cases</Link> */}
         </div>
     );
 
     const guestLinks = (
         <div className='btns'>
             <Link to='/login'>
-                <button type='button' className="s-btn s-btn__primary">Log in</button>
+                <button type='button' className="s-btn s-btn__primary" style={{background:'#5fcf80'}}>Log in</button>
             </Link>
             <Link to='/register'>
-                <button type='button' className='s-btn s-btn__filled'>Sign up</button>
+                <button type='button' className='s-btn s-btn__primary' style={{background:'#5fcf80'}}>Sign up</button>
             </Link>
         </div>
 
@@ -47,7 +47,7 @@ const Header = ({ auth: { isAuthenticated, loading }, logout }) => {
     return(
         <nav className='navbar fixed-top navbar-expand-lg navbar-light bs-md'>
             <Link className='navbar-brand' to='/'>
-                <Logo/>
+                {/* <Logo/> */}
             </Link>
             {!loading && (
                 <Fragment>{isAuthenticated ? authTabs : guestTabs}</Fragment>

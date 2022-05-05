@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { ReactComponent as GlobalIcon } from '../../assets/Globe.svg';
+// import { ReactComponent as GlobalIcon } from '../../assets/Globe.svg';
 import './SideBar.styles.scss';
 
 const SideBar = () => (
@@ -13,26 +13,26 @@ const SideBar = () => (
             </NavLink>
 
             <div className='public-tabs'>
-                <p className='title fc-light'>PUBLIC</p>
+                {/* <p className='title fc-light'>PUBLIC</p> */}
                 <NavLink activeClassName='active' className='icon-link nav_link' to='/questions' >
                     <p>
-                        <GlobalIcon className='icon' />
-                        Stack Overflow
+                        {/* <GlobalIcon className='icon' /> */}
+                        All Questions
                     </p>
                 </NavLink>
-                <NavLink activeClassName='active' className='link nav_link' to='/tags' >
+                {/* <NavLink activeClassName='active' className='link nav_link' to='/tags' >
                     <p>Tags</p>
-                </NavLink>
+                </NavLink> */}
                 <NavLink activeClassName='active' className='link nav_link' to='/users' >
                     <p>Users</p>
                 </NavLink>
-                <NavLink activeClassName='active' className='link nav_link' to='/jobs' >
+                {/* <NavLink activeClassName='active' className='link nav_link' to='/jobs' >
                     <p>Jobs</p>
-                </NavLink>
+                </NavLink> */}
             </div>
-            <div className='teams-tabs'>
+            {/* <div className='teams-tabs'>
                 <p className='title fc-light'>TEAMS</p>
-            </div>
+            </div> */}
         </div>
     </div>
 

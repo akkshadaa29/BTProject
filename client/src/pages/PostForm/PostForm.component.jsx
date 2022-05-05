@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { addPost } from '../../redux/posts/posts.actions';
 
 import './PostForm.styles.scss';
+//import SideBar from '../../components/SideBar/SideBar.component';
 
 const PostForm = ({ auth:{ isAuthenticated, loading }, addPost }) => {
     const [ formData, setFormData ] = useState({
@@ -32,11 +33,12 @@ const PostForm = ({ auth:{ isAuthenticated, loading }, addPost }) => {
     }
 
     return loading === null ? <Fragment>Loading...</Fragment> : <Fragment>
+
         <div className='post-form-container'>
             <div className='post-form-content'>
                 <div className='post-form-header'>
                     <div className='post-form-headline fc-black-800'>
-                        Ask a public question
+                        Ask a question
                     </div>
                 </div>
                 <div className='post-form-section'>
@@ -48,7 +50,7 @@ const PostForm = ({ auth:{ isAuthenticated, loading }, addPost }) => {
                                         <label className='form-label s-label'>
                                             Title
                                             <p className='title-desc fw-normal fs-caption'>
-                                                Be specific and imagine you’re asking a question to another person
+                                                Describe your question in short 
                                             </p>
                                         </label>
                                         <input
@@ -58,14 +60,13 @@ const PostForm = ({ auth:{ isAuthenticated, loading }, addPost }) => {
                                             value={title}
                                             onChange={e => onChange(e)}
                                             id='title'
-                                            placeholder='e.g. Is there an R function for finding the index of an element in a vector?'
+                                            placeholder='e.g. Regarding  Internship, Regarding Placements etc.'
                                         />
                                     </div>
                                     <div className='body-grid'>
                                         <label className='form-label s-label fc-black-800'>
-                                            Body
-                                            <p className='body-desc fw-normal fs-caption fc-black-800'>Include all the information someone would
-                                                need to answer your question</p>
+                                            Question Description
+                                            <p className='body-desc fw-normal fs-caption fc-black-800'>Describe your question properly.</p>
                                         </label>
                                         <textarea
                                             className='s-textarea'
@@ -83,7 +84,7 @@ const PostForm = ({ auth:{ isAuthenticated, loading }, addPost }) => {
                                         <label className='form-label s-label'>
                                             Tag Name
                                             <p className='tag-desc fw-normal fs-caption'>
-                                                Add up to 5 tags to describe what your question is about
+                                                Select categories that fit well for this question.
                                             </p>
                                         </label>
                                         <input
@@ -93,17 +94,17 @@ const PostForm = ({ auth:{ isAuthenticated, loading }, addPost }) => {
                                             value={tagname}
                                             onChange={e => onChange(e)}
                                             id='tagname'
-                                            placeholder='e.g. (ajax django string)'
+                                            placeholder='e.g. (oracle internship interview)'
                                         />
                                     </div>
                                 </div>
                             </div>
                             <div className='post-button mt32'>
-                                <button className='s-btn s-btn__primary' id='submit-button' name='submit-button'>Post your question</button>
+                                <button className='s-btn s-btn__primary' id='submit-button' name='submit-button'  style={{background:'#5fcf80'}}>Post your question</button>
                             </div>
                         </form>
                     </div>
-                    <aside>
+                    {/* <aside>
                         <div className='right-panel'>
                             <div className='widget'>
                                 <div className='s-sidebarwidget--header'>
@@ -176,7 +177,7 @@ const PostForm = ({ auth:{ isAuthenticated, loading }, addPost }) => {
                                 </div>
                             </div>
                         </div>
-                    </aside>
+                    </aside> */}
                 </div>
             </div>
         </div>

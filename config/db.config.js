@@ -1,4 +1,4 @@
-const mysql = require('mysql');
+const mysql = require('mysql2');
 
 // environment variable config
 const dotenv = require('dotenv');

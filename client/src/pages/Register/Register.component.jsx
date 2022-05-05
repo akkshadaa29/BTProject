@@ -5,7 +5,7 @@ import { setAlert } from '../../redux/alert/alert.actions';
 import { register } from '../../redux/auth/auth.actions';
 import PropTypes from 'prop-types';
 
-import { ReactComponent as Logo } from '../../assets/LogoGlyphMd.svg';
+//import { ReactComponent as Logo } from '../../assets/LogoGlyphMd.svg';
 
 import './Register.styles.scss'
 
@@ -32,9 +32,9 @@ const Register = ({ register, isAuthenticated }) => {
         <div className='auth-page'>
             <div className='register-content'>
                 <div className='register-grid'>
-                    <div className='caption fc-black-600'>
-                        <h3>Join the Stack Overflow community</h3>
-                        <div className='caption-item'>
+                    {/* <div className='caption fc-black-600'>
+                        <h3>Join Antwort</h3>
+                         <div className='caption-item'>
                             <div className='grid-icon'>
                                 <svg width='26' height='26' className='svg-icon mtn2'>
                                     <path opacity='.5'
@@ -81,13 +81,15 @@ const Register = ({ register, isAuthenticated }) => {
                                 <br/>
                                 Try a <Link to='https://stackoverflow.com/teams?utm_source=so-owned&utm_medium=product&utm_campaign=public-sign-up&utm_content=teams'>free trial of Stack Overflow for Teams</Link>.
                             </div>
-                        </div>
+                        </div> 
 
-                    </div>
+                    </div> */}
                     <div>
                         <div className='icon-holder'>
-                            <Logo className='icon'/>
+                        <h3>Join Antwort</h3>
+                            {/* <Logo className='icon'/> */}
                         </div>
+                        
                         <div className='form-container'>
                             <form className='login-form' onSubmit={e => onSubmit(e)}>
                                 <div>
@@ -118,21 +120,21 @@ const Register = ({ register, isAuthenticated }) => {
                                     </p>
                                 </div>
                                 <div className='grid gs4 gsy fd-column js-auth-item'>
-                                    <button className='s-btn s-btn__primary' id='submit-button' name='submit-button'>Sign up</button>
+                                    <button className='s-btn s-btn__primary'  id='submit-button' name='submit-button'  >Sign up</button>
                                 </div>
                             </form>
-                            <div className='fs-caption license fc-black-500'>
+                            {/* <div className='fs-caption license fc-black-500'>
                                 By clicking “Sign up”, you agree to our <Link to='https://stackoverflow.com/legal/terms-of-service/public' className='-link'>
                                 terms of service</Link>, <Link to='https://stackoverflow.com/legal/privacy-policy' name='privacy' className='-link'>
                                 privacy policy</Link> and <Link to='https://stackoverflow.com/legal/cookie-policy' className='-link'>cookie policy</Link>
                                 <input type='hidden' name='legalLinksShown' value='1'/>
-                            </div>
+                            </div> */}
                         </div>
-                        <div className='redirects fc-black-500'>
+                        <div className='redirects fc-black-500' >
                             Already have an account? <Link to='/users/login?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent' name='login'>Log in</Link>
-                            <div>
+                            {/* <div>
                                 Are you an employer? <Link to='https://careers.stackoverflow.com/employer/login' name='talent'>Sign up on Talent <svg aria-hidden='true' className='svg-icon va-text-bottom sm:d-none icon-share-sm' width='14' height='14' viewBox='0 0 14 14'><path d='M5 1H3a2 2 0 0 0-2 2v8c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V9h-2v2H3V3h2V1z'/><path d='M7 1h6v6h-2V4.5L6.5 9 5 7.5 9.5 3H7V1z'/></svg></Link>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
